@@ -1,3 +1,25 @@
 body {
     background-color: pink;
 }
+
+/*Tablet*/
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+    body {
+        background-color: orange;
+    }
+}
+
+/* Laptop (kleine desktop)*/
+@media only screen and (min-width: 1024px) and (max-width: 1598px) {
+    body {
+        background-color: green;
+    }
+}
+
+
+/*Grote desktop*/
+@media only screen and (min-width: 1599px) {
+    body {
+        background-color: blue;
+    }
+}

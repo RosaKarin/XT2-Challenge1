@@ -1,18 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;700&display=swap');
 
-
+/*Algemeen*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color:white;
 }
 
-h3 {
-    Font-Family: 'Ubuntu', Sans-Serif;
+h3, h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: black;
 }
 
 p {
     Font-Family: 'Open Sans', Sans-Serif;
+    color: black;
+}
+
+.nameR {
+    font-weight: bold;
 }
 
 main {
@@ -22,7 +29,7 @@ main {
     padding-top: 5%;
 }
 
-.glass {
+.glass { /*Vormgeving glasplaat*/
     background: white;
     min-height: 80%;
     width: 80%;
@@ -30,28 +37,45 @@ main {
     rgba(255, 255, 255, 0.7), 
     rgba(255, 255, 255, 0.3));
     border-radius: 15px;
-    display: flex;
 }
 
-.dashboard {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.main-grid > div { /*Vormgeving divs in main container*/
+    background: linear-gradient(to right bottom, 
+    rgba(255, 255, 255, 0.7), 
+    rgba(255, 255, 255, 0.3));
+    padding: 20px;
+    border-radius: 15px;
 
 }
 
-/*.profile {
-    max-width: 5%;
-    max-height: 5%;
-    border-radius: 50%;
-}
+
+    
+
+
+
+
+
 
 /*Mobile*/
 @media only screen and (max-width: 600px) {
     body {
         background: linear-gradient(to right top, orange, pink);
     }
+
+    .main-grid {
+        display: grid;
+        gap: 10px;
+        padding: 10px;;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'header'
+        'menu'
+        'left'
+        'right'
+        'footer';
+    }
+
 }
 
 
@@ -60,7 +84,44 @@ main {
     body {
         background: linear-gradient(to right top, #65dfc9, pink);
     }
+
+    .main-grid { /*positie van divs, tablet size*/
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+        grid-template-areas:
+        'menu menu header header header header'
+        'menu menu main main right right'
+        'footer footer footer footer footer footer';
+    }
+    
+    .header { 
+        grid-area: header;
+        max-height: 35%;
+        text-align  : center;
+    
+    }
+    
+    .left-profile{ 
+        grid-area: menu;
+        text-align  : center;
+    
+        
+    }
+    .left { 
+        grid-area: main;
+        margin-top: -41%;
+    
+    }
+    
+    .right { 
+        grid-area: right;
+        margin-top: -40%; 
+    
+    }
+    .map { grid-area: footer; }
 }
+
 
 /* Laptop (kleine desktop)*/
 @media only screen and (min-width: 1024px) and (max-width: 1598px) {
@@ -69,13 +130,87 @@ main {
         background: linear-gradient(to right top, #ada7ff, #bbadff);
     }
 
-
+    .main-grid { /*positie van divs, laptop size*/
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+        grid-template-areas:
+        'menu menu header header header header'
+        'menu menu main main right right'
+        'menu menu footer footer footer footer';
+    }
+    
+    .header { 
+        grid-area: header;
+        max-height: 35%;
+        text-align  : center;
+    
+    }
+    
+    .left-profile{ 
+        grid-area: menu;
+        text-align  : center;
+    
+        
+    }
+    .left { 
+        grid-area: main;
+        margin-top: -41%;
+    
+    }
+    
+    .right { 
+        grid-area: right;
+        margin-top: -40%; 
+    
+    }
+    .map { grid-area: footer; }
 }
-
 
 /*Grote desktop*/
 @media only screen and (min-width: 1599px) {
     body {
         background: linear-gradient(to right top, purple, pink)
     }
+
+    .main-grid { /*positie van divs, desktop size*/
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+        grid-template-areas:
+        'header header header header header header'
+        'menu menu main main right right'
+        'footer footer footer footer footer footer';
+
+        justify-items: stretch;
+
+    }
+
+    .header { 
+        grid-area: header;
+        height: 35%;
+        text-align : center;
+    
+    }
+    
+    .left-profile{ 
+        grid-area: menu;
+        text-align  : center;
+        /*margin-top: -47%;*/
+    
+        
+    }
+    .left { 
+        grid-area: main;
+        /*margin-top: -55%;*/
+    
+    }
+    
+    .right { 
+        grid-area: right;
+        /*margin-top: -55%;*/
+    
+    }
+    .map { grid-area: footer; }
+
 }

@@ -1,25 +1,81 @@
-body {
-    background: linear-gradient(to right top, pink, orange)
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color:white;
 }
+
+h3 {
+    Font-Family: 'Ubuntu', Sans-Serif;
+}
+
+p {
+    Font-Family: 'Open Sans', Sans-Serif;
+}
+
+main {
+    min-height: 90%;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.glass {
+    background: white;
+    min-height: 80%;
+    width: 80%;
+    background: linear-gradient(to right bottom, 
+    rgba(255, 255, 255, 0.7), 
+    rgba(255, 255, 255, 0.3));
+    border-radius: 15px;
+    display: flex;
+}
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/*.profile {
+    max-width: 5%;
+    max-height: 5%;
+    border-radius: 50%;
+}
+
+/*Mobile*/
+@media only screen and (max-width: 600px) {
+    body {
+        background: linear-gradient(to right top, orange, pink);
+    }
+}
+
 
 /*Tablet*/
 @media only screen and (min-width: 600px) and (max-width: 1023px) {
     body {
-        background-color: orange;
+        background: linear-gradient(to right top, #65dfc9, pink);
     }
 }
 
 /* Laptop (kleine desktop)*/
 @media only screen and (min-width: 1024px) and (max-width: 1598px) {
+
     body {
-        background-color: green;
+        background: linear-gradient(to right top, #ada7ff, #bbadff);
     }
+
+
 }
 
 
 /*Grote desktop*/
 @media only screen and (min-width: 1599px) {
     body {
-        background-color: blue;
+        background: linear-gradient(to right top, purple, pink)
     }
 }

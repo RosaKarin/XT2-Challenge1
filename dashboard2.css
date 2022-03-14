@@ -89,6 +89,7 @@ main {
         display: grid;
         grid-gap: 10px;
         padding: 10px;
+        grid-template-rows: 50px 1fr 1fr;
         grid-template-areas:
         'menu menu header header header header'
         'menu menu main main right right'
@@ -97,7 +98,7 @@ main {
     
     .header { 
         grid-area: header;
-        max-height: 35%;
+        /*max-height: 35%;*/
         text-align  : center;
     
     }
@@ -110,13 +111,13 @@ main {
     }
     .left { 
         grid-area: main;
-        margin-top: -41%;
+        /*margin-top: -41%;*/
     
     }
     
     .right { 
         grid-area: right;
-        margin-top: -40%; 
+        /*margin-top: -40%; */
     
     }
     .map { grid-area: footer; }

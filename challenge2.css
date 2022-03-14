@@ -1,0 +1,89 @@
+
+
+/* Vorming grid voor upper section */
+.upperSection {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 2px;
+    align-items: center;
+    }
+
+/*Vormgeving upper section */
+#clock {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 45%;
+}
+
+.zon {
+    width: 185px;
+    height: 185px;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: rgb(115, 115, 116) 3px 3px 8px -1px;
+    justify-self: center;
+    grid-area: 2 / 3 / 3 / 3;
+    margin-top: -5%;
+    }
+
+/* Vorming grid voor lower section */
+.lowerSection {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.gegevens { 
+    grid-area: 2 / 1 / 5 / 6;
+    background-color: orange;
+}
+ 
+
+
+
+
+/*Mobile*/
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: yellow;
+    }
+}
+
+/*Tablet*/
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+    body {
+        background-color: purple;
+    }
+}
+
+/* Laptop (kleine desktop)*/
+@media only screen and (min-width: 1024px) and (max-width: 1598px) {
+    body{
+        background-color: pink;
+    }
+}
+
+/*Grote desktop*/
+@media only screen and (min-width: 1599px) {
+    body {
+        background-color: brown;
+    }
+}
+
+
+
+/*Vormgeving glasplaat
+.glass { 
+    background: white;
+    background: linear-gradient(to right bottom, 
+    rgba(255, 255, 255, 0.7), 
+    rgba(255, 255, 255, 0.3));
+    border-radius: 15px;
+}*/

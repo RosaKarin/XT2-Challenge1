@@ -4,21 +4,24 @@
         <title>Digital clock - Rosa van den Heuvel</title>
         <meta charset="UTF-8" />
         <link href="challenge2.css" rel="stylesheet">
+        <link href="keyframe.css" rel="stylesheet">
         <script src="challenge2.js" defer></script>
+        <script src="timezone.js" defer></script>
     </head>
 
-    <body onload="tickingTime()">
+    <body onload="tickingTime()" id="body">
         <!-- Bovenste gedeelte met clock -->
-        <div class="upperSection"> 
-            <div class="zon">
-                <p id="clock"></p>
+        <div class="upperSection" id="upperSection"> 
+            <div class="zon" id="zon">
+                <h2 id="clock"></h2>
             </div>
+            <div class="keyframe" id="keyframe"></div>
         </div>
 
         <div class="gridContainer">
             <div class="grid-item glass">
                 <div class="1">
-                    <p class="left">Dag : </p>
+                    <p class="left">Dag :</p>
                     <div class="right" id="day"></div>   
                 </div>
             </div>
@@ -44,7 +47,6 @@
                 </div>
             </div>
         </div>
-
     </body>
 </html>
 
